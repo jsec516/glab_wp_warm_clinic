@@ -1,0 +1,311 @@
+/* new css wrapper */
+.glab_cas_wrap .header{
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    margin: 0 0 10px 0;
+    padding: 9px;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.glab_cas_wrap .header h3{
+    border: none !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 25px !important;
+    font-weight: normal !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.glab_cas_wrap .form-wrapper{
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    margin: 0;
+    padding: 10px;
+    padding-top:20px;
+    vertical-align: top;
+}
+.form-wrapper .form-table th{
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 0px;
+    padding-top: 5px;
+    width:80px;
+}
+.form-wrapper .form-table.th-medium th{
+    width: 180px;
+}
+.form-wrapper .form-table td{
+    padding: 0px;
+    margin-bottom:10px;
+}
+
+
+.wp-admin .glab_wp_text,.wp-admin .glab_wp_select{
+    font-family: 'Open Sans', sans-serif;
+    /*color: #000;*/
+	color: #606060 !important;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #c9c9c9 !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom:10px;
+}
+.form-wrapper .separator{
+    margin:20px 0px;
+}
+.form-wrapper h4{
+
+    border-top: 1px solid #e6e6e6;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: normal !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.form-wrapper .button,.regular-form-wrapper .button{
+    background: #464646;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0 5px 0 0;
+    padding: 0 20px;
+    -webkit-transition: background 300ms linear;
+    -moz-transition: background 300ms linear;
+    -o-transition: background 300ms linear;
+    transition: background 300ms linear;
+}
+
+.form-wrapper .button:hover,.regular-form-wrapper .button:hover{
+    background: #ff6300;
+    outline: none;
+}
+
+.glab_cas_wrap .hndle.room-title{
+    font-weight:normal;
+    font-size:13px;
+    margin-top:0px;
+}
+
+.glab_cas_wrap .hndle.hndle-header{
+    margin-top:0px !important;
+    font-weight:normal;
+    font-size:17px;
+}
+
+/* end of new css wrapper */
+
+
+.glab_wp_text.large {
+
+
+
+    /*border: 1px solid #c9c9c9 !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #acacac !important;
+    float: left !important;
+    font-family: 'Open Sans', sans-serif !important;*/
+
+    /*float: left;*/
+
+    padding: 4px 9px;
+    width: 300px;
+}
+
+.glab_wp_text.width-114 {
+    width: 114px;
+    height: 30px;
+}
+
+.wp-color-result {
+    width: 85px;
+}
+
+.glab_wp_select.large{
+    width: 300px;
+    border: 1px solid #c9c9c9 !important;
+}
+.glab_wp_select.auto{
+    width: auto;
+    border: 1px solid #c9c9c9 !important;
+}
+
+.wp-list-table .column-color_value,.wp-list-table .column-allow_multiple,.wp-list-table .column-status{
+    width:15%;
+}
+.wp-list-table .column-description{
+    width: 30%;
+}
+
+.glab-clinic-services li{
+    padding: 10px;
+    background: #ddd;
+    cursor: move;
+}
+
+.glab-create-room .submit{
+    margin-top: 0px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.postbox.glab_available_room{
+    width:300px;
+    display:block;
+    float:left;
+    margin-left:30px !important;
+    min-height: 200px;
+}
+
+.load-wait-schedule{
+    padding-top:20px;
+}
+.load-wait-schedule .init-slot{
+    visibility: hidden;
+}
+
+.suggested_customer{
+    cursor: pointer;
+}
+
+.suggested_customer:hover{
+    background:#6666ff;
+    color:#fff;
+}
+
+.reminder-options-container{
+    margin-top: 20px;
+}
+.reminder-options-container div{
+    float:left;
+    width:220px;
+}
+.reminder-options-container span{
+    clear:both;
+}
+
+/* clinic configuration */
+.glab-toggle-menu{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    display:none;
+    z-index:2;
+}
+.empty-room{
+	display: block;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.empty-room a{
+	display:block;
+	background:red;
+	color:#fff;
+	font-size:15px;
+	text-decoration:underline;
+	padding:10px;
+}
+#service_list_container{
+	
+	}
+#service_list_container h1{
+	text-align:center;
+	}
+
+.service-table{
+	width:300px;
+	
+	}
+	.service-table .text-right{
+		text-align:right;
+	}
+	.service-table td{
+		width: 50%;
+		padding-bottom:5px;
+		
+	}
+	.service-table .button-td{
+		text-align: center;
+padding-top: 20px;
+	}
+	
+
+.glab-toggle-menu li{
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-bottom: 1px dotted #3B3E40;
+}
+
+.glab-toggle-menu li:last-child{
+    border-bottom: 0px;
+}
+
+.glab-toggle-menu a{
+    color:#000;
+}
+
+.glab_available_room .glab-option-menu{
+    color: #fff;
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 8px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../images/down_arrow_icon.png');
+    background-repeat: no-repeat;
+}
+
+.glab_available_room .glab-option-menu:focus{
+    box-shadow: none !important;
+}
+
+.glab-room-services li{
+    background: #ddd !important;
+    padding: 10px;
+    position: relative;
+}
+
+.glab-remove-service{
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #545454 !important;
+    display: block;
+}
+
+.glab-poll-container{
+    margin-top:20px;
+}
+
+span.required{
+	color:red;
+}
+
+.call-content-container{
+	display:none;
+}

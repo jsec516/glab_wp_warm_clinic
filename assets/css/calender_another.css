@@ -1,0 +1,206 @@
+table.calendar    { border-left:1px solid #999; }
+
+tr.calendar-row  {  }
+
+td.calendar-day  { min-height:80px; font-size:11px; position:relative; } * html div.calendar-day { height:80px; }
+
+td.calendar-day:hover  { /*background:#eceff5;*/
+
+color:#fff;
+
+/*background-image: -webkit-gradient(
+
+    linear,
+
+    left bottom,
+
+    left top,
+
+    color-stop(0.01, rgb(62,84,194)),
+
+    color-stop(0.51, rgb(102,136,204)),
+
+    color-stop(0.76, rgb(98,144,204))
+
+);
+
+background-image: -moz-linear-gradient(
+
+    center bottom,
+
+    rgb(62,84,194) 1%,
+
+    rgb(102,136,204) 51%,
+
+    rgb(98,144,204) 76%
+
+);
+
+background:#9aa8d7;
+
+*/
+
+ }
+
+ 
+
+ td.calendar-day .day-number:hover{
+
+	color:#d3d3d3;font-weight:bold;
+
+ }
+
+ 
+
+
+
+td.calendar-day-np  { background:#C4C4C2; min-height:80px;vertical-align:top; color:gray;} * html div.calendar-day-np { height:80px; }
+
+td.calendar-day-head { background:#000 url(../images/calendar_head.jpg) repeat-x scroll left top; font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #999; border-top:1px solid #999; border-right:1px solid #999; color:#fff;}
+
+div.day-number    {   color:#333333;  /*margin:-30px -5px 0 0;*/ width:15%; float:left; height:10px;display:block;margin-left:14px; }
+
+/* shared */
+
+td.calendar-day, td.calendar-day-np { width:170px; padding-top:5px; border-bottom:1px solid #E7E7E6; border-right:1px solid #E7E7E6; height:110px !important ;}
+
+td.calendar-day{background:#FAFAFA;vertical-align:top;}
+
+.cal_left_cursor,.cal_right_cursor,.view_left_cursor,.view_right_cursor{cursor:pointer;}
+
+#cal_label{background:#EEEEEE; padding-left: 15px;padding-right: 15px;text-align: center;}
+
+#cal_opt{float:right;display:inline;}
+
+#cal_view_type{display:inline;}
+
+.cal_header_opt{margin-top:30px;margin-bottom:10px;padding-bottom:10px;/*border-bottom:3px solid #eee;*/width:95%;}
+
+#cal_week_scroll{display:inline;}
+
+
+
+.b_common{
+
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+
+	width:100%;
+
+	/*border-collapse:collapse;*/
+
+}
+
+#week_table{
+
+	background:#FFFFFF;
+
+}		
+
+#week_table  td{
+
+			
+
+	border-left:3px solid #828282;
+
+	/*border-top:.5px solid #999;*/
+
+	border-bottom:1px solid #999;		
+
+	/*border-left:1.5px solid #000;
+
+	border-top:.5px solid gray;*/
+
+}
+
+		
+
+.calendar_week_day:hover{
+
+	background:#9aa8d7;
+
+}
+
+.calendar_week_head{
+/*background:url(../img/week_bg.jpg) repeat-x scroll left top;*/
+background:#717171;
+ font-weight:bold; text-align:center; width:120px; padding:5px; border-bottom:1px solid #A5A2A2; border-top:1px solid #A5A2A2; border-right:1px solid #A5A2A2; color:#fff; border-left: 0px solid #E7E7E6;}
+
+.calendar_week{
+
+	width:50px;
+    background:#717171;
+	/*padding-left:10px;*/
+	text-align:center;
+border-bottom:1px solid #A5A2A2; border-top:0px solid #FFFFFF; border-right:1px solid #E7E7E6;border-left:#E7E7E6;
+	/*background:url(../img/week_bg.jpg) repeat scroll left top;*/
+	height:100px;
+
+}
+
+
+
+#calendar_week_title{background:url(../img/week_bg.jpg) no-repeat scroll left top;}
+
+/*for datepicker*/
+
+
+
+/* end of datepicker css*/
+
+/*=========== ANAND ============*/
+
+div.calendar-day-head { 
+		background:#000 url(../img/calendar_head.jpg) repeat-x scroll left top; 
+		font-weight:bold; 
+		text-align:center; 
+		width:12.34%; 
+		padding:5px; 
+		border-bottom:1px solid #999;
+		border-top:1px solid #999; 
+		border-right:1px solid #999; 
+		color:#fff;
+		float:left;
+ }
+ 
+ div.calendar_week_day { 
+		text-align:center; 
+		width:12.34%; 
+		padding:5px; 
+	    border-bottom:1px solid #E7E7E6 !important;
+		border-top:1px solid #E7E7E6; 
+		border-right:1px solid #E7E7E6; 
+		color:#fff;
+		float:left;
+	/*	border-bottom:.5px solid #999;*/
+		height:22px;
+		z-index:9999;
+ }
+ 
+ .time {
+		 color: #FFFFFF;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 13px;
+    margin-top: -15px;
+    position: absolute;
+    text-decoration: underline;
+ }
+ 
+ .time_box {
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #717171;
+    float: left;
+    height: 26px;;
+    padding: 4px;
+    vertical-align: middle;
+    width:5.9%;
+ }
+
+.room_head_title
+{
+ background:#000 url(../img/calendar_head.jpg) repeat-x scroll left top;
+ }

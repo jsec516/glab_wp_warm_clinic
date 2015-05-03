@@ -1,0 +1,45 @@
+
+#daily_view_dashboard_widget{
+	width:1145px;
+}
+
+#hours_div{
+		border:1px solid #ccc;
+			margin-top:10px;
+			text-align:center;
+			width:1120px;
+		}
+		
+	
+		#hours_table td
+		{
+			
+			/*border:1px solid #98bf21;*/
+			border-left:1.5px solid #000;
+			border-top:1px solid gray;
+			
+		}
+		#hours_table th{
+			font-size:1em;
+			padding:3px 7px 2px 7px;
+		}
+		#hours_table td{
+			font-size:1em;
+		}
+		#hours_table th 
+		{
+			font-size:1.1em;
+			text-align:center;
+			padding-top:1px;
+			padding-bottom:1px;
+			background-color:#000;
+			color:#ffffff;
+		}
+		.b_common{
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			width:100%;
+			/*border-collapse:collapse;*/
+		}
+		.room_head_title{
+			border-width:1px 0px 1px 1px;border-style:solid; border-color:#fff;
+		}

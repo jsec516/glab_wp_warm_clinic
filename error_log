@@ -1,0 +1,102 @@
+[25-Dec-2014 02:02:01 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 02:02:01 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 02:57:03 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 02:57:03 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '3' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 02:57:03 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 02:57:03 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '3' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 04:02:37 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 04:02:37 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 04:02:59 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 04:02:59 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 09:14:13 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 09:14:13 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '3' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 09:14:13 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '2' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[25-Dec-2014 09:14:13 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '3' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[26-Dec-2014 04:41:00 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[26-Dec-2014 04:41:00 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[31-Dec-2014 21:29:11 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[31-Dec-2014 21:29:11 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[01-Jan-2015 02:11:11 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[01-Jan-2015 02:11:11 UTC] WordPress database error Column 'first_name' in field list is ambiguous for query SELECT flag,first_name,last_name 
+    			FROM glab_cas_appointments
+				LEFT JOIN glab_cas_users ON glab_cas_users.id = glab_cas_appointments.user_id 
+				LEFT JOIN glab_cas_services ON glab_cas_services.id = glab_cas_appointments.service_id  
+				WHERE glab_cas_appointments.id = '4' made by call_user_func, glab_calendar->weekly, glab_weekly->regular_view, glab_weekly_html::generate_calendar, glab_weekly_html::draw_calendar, glab_weekly_html::create_week_chart, glab_appointment_layer->get_app_title_info
+[11-Jan-2015 08:57:30 UTC] PHP Fatal error:  Call to undefined function is_csv_file() in /home2/ishift/public_html/clinic/wp-content/plugins/glab_clinic/php/glab_import.php on line 20
+[11-Jan-2015 08:58:10 UTC] PHP Fatal error:  Call to undefined function is_csv_file() in /home2/ishift/public_html/clinic/wp-content/plugins/glab_clinic/php/glab_import.php on line 20

@@ -1,0 +1,15 @@
+# Editors
+/nbproject/private/
+.buildpath
+.project
+.settings*
+
+# Windows junk
+Thumbs.db
+
+# unnecessary for git
+/php/ZendGdata/
+/php/glab_tables.php
+
+# Logs
+/logs
