@@ -1,0 +1,1 @@
+// declare all required variable

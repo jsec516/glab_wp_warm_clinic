@@ -1,0 +1,21 @@
+#wp-admin-bar-site-name a{
+	/*font: normal 22px Arial Black, "Arial Black", "Bitstream Charter", Times, serif;
+padding: 10px 8px 5px;
+margin: 0;*/
+
+}
+#wpadminbar  #wp-admin-bar-wait-indicator a{
+	/*position: relative;
+	left:250px;*/
+	font-weight:bold;
+}
+#waitingListDiv li:hover{
+     background:#FCFCFC !important;
+}
+#waitingListDiv li a:hover{
+    background:#FCFCFC;
+}
+
+#wpadminbar #wp-admin-bar-wait-indicator li a:hover{
+   background:#FCFCFC !important;
+}

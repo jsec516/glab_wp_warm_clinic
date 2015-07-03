@@ -1,0 +1,163 @@
+.appointment_title {
+	color: #464646;
+	font: italic 30px/35px Georgia, "Times New Roman", "Bitstream Charter",
+		Times, serif;
+	margin: 0;
+	padding: 0px 15px 3px 0;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+#divAppointment table th {
+	vertical-align: top;
+}
+
+#add_app_table {
+	margin-top: 50px;
+}
+
+#add_app_table th {
+	text-align: right;
+	width: 40%;
+}
+
+#add_app_table td {
+	padding-left: 20px;
+}
+
+#add_app_table select,input {
+	font-size: 1.2em;
+	padding: 5px 0px 5px 5px;
+	text-align: center;
+}
+
+#add_app_table span {
+	padding-right: 10px;
+}
+
+/* for autocompleter */
+.atc_over { /*background-color: #0A246A;
+
+		color: #fff;*/
+	
+}
+
+.ac_results {
+	background-color: white;
+	border: 1px solid black;
+	overflow: hidden;
+	padding: 0;
+	z-index: 99999;
+	line-height: 1.22em;
+}
+
+.ac_results ul {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.ac_results li {
+	cursor: pointer;
+	display: block;
+	font: menu;
+	font-size: 1.2em;
+	line-height: 16px;
+	margin: 0;
+	overflow: hidden;
+	padding: 2px 5px;
+}
+
+.app_error {
+	display: none;
+	color: #fff;
+	background: red;
+	width: 100%;
+	padding: 10px;
+	/*position:absolute;*/
+	top: 75px;
+}
+
+.app_error span {
+	line-height: 20px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.ac_results li:hover {
+	color: #fff;
+	background: #0A246A;
+}
+
+.operationSuccess {
+	visibility: hidden;
+}
+
+#fA {
+	left: 531px !important;
+	position: absolute;
+	top: 484px !important;
+	width: 245px;
+}
+
+#bookingFA {
+	left: 238px;
+	position: absolute;
+	top: 495px;
+	width: 245px;
+}
+
+#lA {
+	left: 238px;
+	position: absolute;
+	top: 545px;
+	width: 245px;
+}
+
+#eA {
+	left: 238px;
+	position: absolute;
+	top: 605px;
+	width: 245px;
+}
+
+#app_table_form {
+	margin-top: 50px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/*Chrome CSS here*/
+	#fA {
+		left: 521px !important;
+		position: absolute;
+		top: 484px !important;
+		width: 245px;
+	}
+	#bookingfA {
+		left: 237px;
+		position: absolute;
+		/*top: 475px;*/
+		top: 540px;
+		width: 247px;
+	}
+	#lA {
+		left: 237px;
+		position: absolute;
+		/*top: 530px;*/
+		top: 590px;
+		width: 247px;
+	}
+	#eA {
+		left: 237px;
+		position: absolute;
+		/*top: 587px;*/
+		top: 645px;
+		width: 247px;
+	}
+	#app_table_form {
+		margin-top: 100px;
+	}
+	#image {
+		align: center;
+	}
+}

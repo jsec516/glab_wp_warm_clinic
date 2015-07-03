@@ -1,0 +1,53 @@
+#scheduleForm{
+	display:none;
+	margin-top:20px;
+}
+#scheduleForm th{
+	text-align:left;
+	font-size:18px;
+}
+#scheduleForm tr{
+	line-height:2em;
+}
+.day-start .week-day, #scheduleForm .meridian{
+	display:inline-block;
+	width:50px;
+}
+
+#scheduleForm select{
+	width:50px;
+}
+#table_display_schedule{
+	font-size:15px;
+	border-collapse: collapse;
+	width:500px;
+}
+#table_display_schedule th,#table_display_schedule td{
+	padding:10px;
+	 border: 1px solid #484848;
+}
+
+#table_display_schedule th{
+	text-align:left;
+}
+#table_display_schedule .day-label{
+	width:50px;
+	text-align:left;
+}
+
+#table_display_schedule .schedule-label{
+	position:relative;
+}
+#table_display_schedule .change-schedule{
+	position: absolute;
+	right:5px;
+	top:5px;
+	display:inline-block;
+	text-decoration:none;
+	padding:5px 10px;
+	background:#2ea2cc;
+	border:1px solid #0074a2;
+	color:#fff;
+	border-radius:2px;
+	font-size:13px;
+}

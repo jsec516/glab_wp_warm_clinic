@@ -1,0 +1,4 @@
+customer_firstname, customer_lastname, customer_email, customer_phone, doctors_email, service_name,app_start_time, app_end_time, app_date, app_reminder, room_name
+jahidul,islam,jsec516@gmail.com,123456,rebeccarisk@gmail.com,Acupuncture,10:30AM,11:00AM,2014-06-07,1,101
+travor,belis,travorbelis@gmail.com,123456,kevinfojfer@gmail.com,BioMeridian Testing,12:30PM,1:30PM,2014-06-11,2,102
+travor,belis,travorbelis@gmail.com,123456,kevinfojfer@gmail.com,Acupuncture,3:30PM,4:30PM,2014-06-12,2,101
