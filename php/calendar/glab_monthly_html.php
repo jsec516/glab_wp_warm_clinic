@@ -1,7 +1,8 @@
 <?php
 class glab_monthly_html 
 {
-	static function generate_calendar($data) {
+	static function generate_calendar($data) 
+	{
 		require_once dirname ( dirname ( __FILE__ ) ) . '/helper/glab_html_helper.php';
 		extract ( $data );
 		
@@ -9,14 +10,15 @@ class glab_monthly_html
 			echo '<link type="text/css" rel="stylesheet" href="' . plugins_url ( 'glab_clinic/assets/css/calender.css' ) . '" />';
 			echo '<link type="text/css" rel="stylesheet" href="' . plugins_url ( 'glab_clinic/assets/css/barChart.css' ) . '" />';
 			self::generate_heading ( $data );
-		?>		<div id="calendar_view_main" style="visibility: visible; width: 95%; margin: 0pt 0pt 0pt 14px;">        <?php 
+			?>			<div id="calendar_view_main" style="visibility: visible; width: 95%; margin: 0pt 0pt 0pt 14px;">        	<?php 
 		}
         echo self::draw_calendar($data); ?>
-        <?php if(!isset($_POST['from_calendar_ajax'])){ ?>        </div>		<div id="calendar_view_main1" style="display: none; width: 95%; margin: 0pt 0pt 0pt 14px;">			<div class="app_error" id="app_error13"></div>			<div id="divAppointment1" style="display: none; overflow: hidden;"></div>		</div>		<?php 
+        <?php if(!isset($_POST['from_calendar_ajax'])){ ?>	        </div>			<div id="calendar_view_main1" style="display: none; width: 95%; margin: 0pt 0pt 0pt 14px;">				<div class="app_error" id="app_error13"></div>				<div id="divAppointment1" style="display: none; overflow: hidden;"></div>			</div>			<?php 
 		}	}
 	
-	static function generate_bar_chart($appointments, $daySlot, $rooms) {
-		if (! isset ( $appointments ) || empty ( $appointments ))
+	static function generate_bar_chart($appointments, $daySlot, $rooms) 
+	{
+		if (! isset($appointments) || empty($appointments))
 			return '';
 		
 		// bar html
@@ -28,134 +30,50 @@ class glab_monthly_html
 		$bar .= '</div>';
 		return $bar;
 	}
-	static function calcuate_total_percentage($totalhoursfortheday, $num_of_rooms, $working_hour, $rooms_with_appts) {
-		$totalpercentage = 0;
-		
-		// echo $totalhoursfortheday.'<br/>';
-		
-		if ($working_hour > 0) {
-			
-			// TODO: conver working hour to minute
-			
-			$totalpercentage = ($totalhoursfortheday * 100) / (count ( $rooms_with_appts ) * ($working_hour * 60));
-		} else {
-			
-			$totalpercentage = 0;
-		}
-		
-		if (($totalpercentage < 5) and ($totalpercentage > 0)) {
-			
-			$totalpercentage = ceil ( $totalpercentage / 5 ) * 5;
-		} 
-
-		else if (($totalpercentage > 90) and ($totalpercentage < 100)) {
-			
-			$totalpercentage = floor ( $totalpercentage / 5 ) * 5;
-		} 
-
-		else {
-			
-			$totalpercentage = round ( $totalpercentage / 5 ) * 5;
-		}
-		
-		return $totalpercentage;
-	}
-	static function calculate_bar_left_position($num_of_rooms) {
-		$fromleft = 25;
-		
-		switch ($num_of_rooms) {
-			
-			case '1' :
-				
-				$fromleft = 109;
-				
-				break;
-			
-			case '2' :
-				
-				$fromleft = 95;
-				
-				break;
-			
-			case '3' :
-				
-				$fromleft = 81;
-				
-				break;
-			
-			case '4' :
-				
-				$fromleft = 67;
-				
-				break;
-			
-			case '5' :
-				
-				$fromleft = 53;
-				
-				break;
-			
-			case '6' :
-				
-				$fromleft = 39;
-				
-				break;
-			
-			case '7' :
-				
-				$fromleft = 25;
-				
-				break;
-		}
-		
-		return $fromleft;
-	}
-	static function prepare_rooms_appts($appointments, $rooms) {
+	
+	static function prepare_rooms_appts($appointments, $rooms) 
+	{
 		$room_array = array ();
 		
 		foreach ( $rooms as $room ) {
-			
 			$total_room_appts = self::find_room_appts ( $room ['id'], $appointments );
-			
 			$room ['num_of_appts'] = $total_room_appts ['number'];
-			
 			$room ['appt_service_duration'] = $total_room_appts ['appt_service_duration'];
-			
 			$room_array [] = $room;
 		}
 		
 		return $room_array;
 	}
-	static function find_room_appts($room_id, $appointments) {
-		$output = array ();
-		
-		$num_of_appts = 0;
-		
-		$service_total_duration = 0;
-		
-		foreach ( $appointments as $appt ) {
-			
-			if ($room_id == $appt ['room_id']) {
-				
-				$num_of_appts ++;
-				
-				$service_total_duration += $appt ['service_duration'];
-			}
-		}
-		
-		$output ['number'] = $num_of_appts;
-		
-		$output ['appt_service_duration'] = $service_total_duration;
-		
-		return $output;
-	}
-	static function generate_heading($args) {
+	
+	static function generate_heading($args) 
+	{
 		extract ( $args );
-		
-		?><div class="cal_header_opt" id="calendar-head-option">	<table cellpadding="0" cellspacing="0" width="100%">		<tr>			<td width="26%" align="left">				<div id="cal_view_type">					<span class="view_left_cursor"> <a class="prev-calendar"						href='<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule'; ?>'						data-month="<?php echo $recent_month[0]; ?>"						data-year="<?php echo $recent_month[1]; ?>"						data-view_type="<?php echo $prev_view_type; ?>"> <img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" /></a>					</span> <span id="calendar_view_type"						style="display: inline-block; width: 75px; text-align: center; vertical-align: top;"><?= strtoupper($view_type); ?></span>					<span class="view_right_cursor"> <a class="next-calendar"						href="<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule'; ?>"						data-month="<?php echo $recent_month[0]; ?>"						data-year="<?php echo $recent_month[1]; ?>"						data-view_type="<?php echo $next_view_type; ?>"> <img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div> <input type="hidden" name="slide_view_id" value=""				id="slide_view_id" /> <span id="asd" style="float: right;"></span> <span				id="asdf" style="float: right; display: none;">					<div id="top_v_slider">						<a							onclick="delete_appointment11(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '3');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />						</a> View Appointment <a							onclick="Appointment_view_slider(), slide_s_view('top_v_slider', '1');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />						</a>					</div>					<div id="top_v_slider1" style="display: none;">						<a							onclick="showAppDetails(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '0');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />						</a> Add New Appointment <a							onclick="edit_an_appointment(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '2');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />						</a>					</div>					<div id="top_v_slider2" style="display: none;">						<a							onclick="Appointment_view_slider(), slide_s_view('top_v_slider', '1');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />						</a> Edit Appointment <a							onclick="delete_appointment11(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '3');
-                                        ;"> <img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />						</a>					</div>					<div id="top_v_slider3" style="display: none;">						<a							onclick="edit_an_appointment(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '2');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />						</a> Delete Appointment <a							onclick="showAppDetails(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '0');">							<img							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />						</a>					</div>			</span>			</td>			<td width="50%" align="center">				<div id="cal_prac_view"					style="display: inline-block; vertical-align: top;">					<table style="display: inline-block; margin-top: -10px;">						<td style="font-size: 17px;">&nbsp;</td>						<td style="vertical-align: top; padding-left: 40px;"><select							class="filter-practitioner"							style="font-size: 15px; width: 350px; text-align: center;">								<option value="0">Select Practitioner</option>
-                                        <?= glab_html_helper::prac_options($practitioners); ?>
-                                    </select></td>					</table>				</div>			</td>			<td align="right" width="25%">				<div id="cal_opt">					<span class="cal_left_cursor"> <a class="prev-number"						data-view_type="monthly"						data-month="<?php echo $previous_month[0]; ?>"						data-year="<?php echo $previous_month[1]; ?>"> <img							id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />					</a>					</span> <span id="curr_month_year"						style="padding-left: 20px; padding-right: 20px; vertical-align: top;"><?= $recent_month_in_text[0] . ' ' . $recent_month_in_text[1]; ?></span>					<span class="cal_right_cursor"> <a class="next-number"						data-view_type="monthly"						data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>				<div id="week_opt" style="display: none; float: right;">					<span class="cal_left_cursor"> <a class="prev-number"						data-view_type="weekly"						data-month="<?php echo $previous_month[0]; ?>"						data-year="<?php echo $previous_month[1]; ?>"						href="<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule&month=' . $previous_month[0] . '&year=' . $previous_month[1]; ?>">							<img id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />					</a>					</span> <span id="week_opt_number"						style="padding-left: 20px; padding-right: 20px; vertical-align: top;"><?= $recent_month[0] . ' ' . $recent_month[1]; ?></span>					<span class="cal_right_cursor"> <a class="next-number"						data-view_type="weekly" data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>				<div id="daily_opt" style="display: none; float: right;">					<span class="cal_left_cursor"> <a class="prev-number"						data-view_type="daily"						data-month="<?php echo $previous_month[0]; ?>"						data-year="<?php echo $previous_month[1]; ?>"> <img							id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />					</a>					</span> <span id="daily_opt_number"						style="padding-left: 20px; padding-right: 20px; vertical-align: top;"><?= $recent_month[0] . ' ' . $recent_month[1]; ?></span>					<span class="cal_right_cursor"> <a class="next-number"						data-view_type="daily" data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>			</td>		</tr>	</table>	<input type="hidden" id="view_type" value="<?= $view_type; ?>" /></div><?php
+		?>		<div class="cal_header_opt" id="calendar-head-option">			<table cellpadding="0" cellspacing="0" width="100%">				<tr>					<td width="26%" align="left">						<div id="cal_view_type">							<span class="view_left_cursor"> 
+								<a class="prev-calendar" href='<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule'; ?>' data-month="<?php echo $recent_month[0]; ?>" data-year="<?php echo $recent_month[1]; ?>"								data-view_type="<?php echo $prev_view_type; ?>"> 
+									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />
+								</a>							</span> 
+							<span id="calendar_view_type" style="display: inline-block; width: 75px; text-align: center; vertical-align: top;"><?= strtoupper($view_type); ?></span>							<span class="view_right_cursor"> 
+								<a class="next-calendar" href="<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule'; ?>" data-month="<?php echo $recent_month[0]; ?>" data-year="<?php echo $recent_month[1]; ?>"								data-view_type="<?php echo $next_view_type; ?>"> 
+									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>" alt="" />								</a>							</span>						</div> 
+						<input type="hidden" name="slide_view_id" value="" id="slide_view_id" /> 
+						<span id="asd" style="float: right;"></span> 
+						<span id="asdf" style="float: right; display: none;">							<div id="top_v_slider">								<a onclick="delete_appointment11(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '3');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />								</a> 
+								View Appointment 
+								<a onclick="Appointment_view_slider(), slide_s_view('top_v_slider', '1');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>" alt="" />								</a>							</div>							<div id="top_v_slider1" style="display: none;">								<a onclick="showAppDetails(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '0');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />								</a> 
+								Add New Appointment 
+								<a onclick="edit_an_appointment(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '2');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>" alt="" />								</a>							</div>							<div id="top_v_slider2" style="display: none;">								<a onclick="Appointment_view_slider(), slide_s_view('top_v_slider', '1');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />								</a> 
+								Edit Appointment 
+								<a onclick="delete_appointment11(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '3');"> 
+									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>" alt="" />								</a>							</div>							<div id="top_v_slider3" style="display: none;">								<a onclick="edit_an_appointment(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '2');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />								</a> 
+								Delete Appointment 
+								<a onclick="showAppDetails(document.getElementById('slide_view_id').value), slide_s_view('top_v_slider', '0');">									<img src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>" alt="" />								</a>							</div>						</span>					</td>					<td width="50%" align="center">						<div id="cal_prac_view" style="display: inline-block; vertical-align: top;">							<table style="display: inline-block; margin-top: -10px;">								<td style="font-size: 17px;">&nbsp;</td>								<td style="vertical-align: top; padding-left: 40px;">
+									<select class="filter-practitioner" style="font-size: 15px; width: 350px; text-align: center;">										<option value="0">Select Practitioner</option>                                        <?= glab_html_helper::prac_options($practitioners); ?>                                    </select>
+                                </td>							</table>						</div>					</td>					<td align="right" width="25%">						<div id="cal_opt">							<span class="cal_left_cursor"> 
+								<a class="prev-number" data-view_type="monthly" data-month="<?php echo $previous_month[0]; ?>" data-year="<?php echo $previous_month[1]; ?>"> 
+									<img id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>" src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>" alt="" />								</a>							</span> 
+							<span id="curr_month_year" style="padding-left: 20px; padding-right: 20px; vertical-align: top;">
+								<?= $recent_month_in_text[0] . ' ' . $recent_month_in_text[1]; ?>
+							</span>							<span class="cal_right_cursor"> <a class="next-number"						data-view_type="monthly"						data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>				<div id="week_opt" style="display: none; float: right;">					<span class="cal_left_cursor"> <a class="prev-number"						data-view_type="weekly"						data-month="<?php echo $previous_month[0]; ?>"						data-year="<?php echo $previous_month[1]; ?>"						href="<?php echo $_SERVER['PHP_SELF'] . '?page=gc_service_schedule&month=' . $previous_month[0] . '&year=' . $previous_month[1]; ?>">							<img id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />					</a>					</span> <span id="week_opt_number"						style="padding-left: 20px; padding-right: 20px; vertical-align: top;"><?= $recent_month[0] . ' ' . $recent_month[1]; ?></span>					<span class="cal_right_cursor"> <a class="next-number"						data-view_type="weekly" data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>				<div id="daily_opt" style="display: none; float: right;">					<span class="cal_left_cursor"> <a class="prev-number"						data-view_type="daily"						data-month="<?php echo $previous_month[0]; ?>"						data-year="<?php echo $previous_month[1]; ?>"> <img							id="<?= $previous_month[0] . '-' . $previous_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-left.png'); ?>"							alt="" />					</a>					</span> <span id="daily_opt_number"						style="padding-left: 20px; padding-right: 20px; vertical-align: top;"><?= $recent_month[0] . ' ' . $recent_month[1]; ?></span>					<span class="cal_right_cursor"> <a class="next-number"						data-view_type="daily" data-month="<?php echo $next_month[0]; ?>"						data-year="<?php echo $next_month[1]; ?>"> <img							id="<?= $next_month[0] . '-' . $next_month[1]; ?>"							src="<?php echo plugins_url('glab_clinic/assets/images/nav-right.png'); ?>"							alt="" />					</a>					</span>				</div>			</td>		</tr>	</table>	<input type="hidden" id="view_type" value="<?= $view_type; ?>" /></div><?php
 	}
 	static function draw_calendar($args) {
 		extract ( $args );
