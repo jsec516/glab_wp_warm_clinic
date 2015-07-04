@@ -88,7 +88,7 @@ class glab_weekly_html {
 
         $calendar .= '<div class="calendar-row"  style="height:auto;overflow:hidden;">
 
-	<div class="calendar-day-head" style="width:6.5%;padding:0px;background:none repeat scroll 0 0 #717171;">
+	<div class="calendar-day-head" style="width:6.5%;padding:0px;background:none repeat scroll 0 0 #717171;  border-right: 2px solid #717171;border-bottom: 1px solid #717171;">
 
 	<input type="hidden" id="day" value="' . date('d', strtotime($recent_week_date)) . '"  />
 
@@ -100,7 +100,7 @@ class glab_weekly_html {
 
 	<input type="hidden" id="year" value="' . date('Y', strtotime($recent_week_date)) . '" />
 
-	<span style="width:100%;padding-top:5px;padding-bottom:5px;display:block;background:none repeat scroll 0 0 #717171;">TIME</span>
+	<span style="width:100%;padding-top:5px;padding-bottom:7px;display:block;background:none repeat scroll 0 0 #717171;">TIME</span>
 
 	</div>';
 

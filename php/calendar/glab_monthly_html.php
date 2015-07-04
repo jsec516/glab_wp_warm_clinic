@@ -22,10 +22,14 @@ class glab_monthly_html
 			return '';
 		
 		// bar html
+		$no_of_appointments = count ($appointments);
+		$appt_string = ($no_of_appointments > 1) ? 'Appointments' : 'Appointment';
 		$bar = '<div class="bargraph" style="width: 100%; position:relative; margin-top:31px;">';
-		$bar .= '<div style="color:#000000;font-family:Impact,Arial, Helvetica, sans-serif;font-size:21px;width:40px; margin-top: 31px;margin-left:0px;font-weight:normal;position:absolute;text-align:center;">' . count ( $appointments ) . 
-					'<div style="font-size:6px;font-weight:normal;">Appointments
-        			</div>
+		$bar .= '<div style="color:#000000;font-family:Impact,Arial, Helvetica, sans-serif;font-size:50px;width:150px; margin-top: 0px;margin-left:0px;font-weight:normal;position:absolute;text-align:center;">'
+					 . $no_of_appointments . 
+					'<div style="font-size:15px;font-weight:normal;margin-top:20px;">'
+					.$appt_string.
+        			'</div>
         		</div>';
 		$bar .= '</div>';
 		return $bar;

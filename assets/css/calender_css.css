@@ -92,7 +92,7 @@ td.calendar-day{background:#FAFAFA;vertical-align:top;}
 
 #week_table{
 
-	background:#FFFFFF;
+	/*background:#FFFFFF;*/
 
 }		
 
@@ -112,7 +112,9 @@ td.calendar-day{background:#FAFAFA;vertical-align:top;}
 
 }
 
-		
+#week_table > div > div:nth-child(2){
+	display:none;
+}		
 
 .calendar_week_day:hover{
 
@@ -176,6 +178,7 @@ div.calendar-day-head {
 	/*	border-bottom:.5px solid #999;*/
 		height:22px;
 		z-index:9999;
+		background: #fff;
  }
  
  .time {
