@@ -1,123 +1,111 @@
 /* modified by masc technologies */
-
 .bargraph {
 	height: 83px;
 	position: absolute;
-	
-	/*border-left: 1px solid #d4d4d4;*/
-	/*overflow:hidden;*/
-	
-	/*margin-left:39px;*/
 }
+
 .label {
 	list-style-type: none;
-	position: absolute; bottom: 0px;
-	margin: 0; padding: 0;
-	/*background: url(images/room_bg.png) repeat-x;*/
-	background:#000000;
-	border:1px solid #9A9B9C;
-	right:0;
-	width:100%;
+	position: absolute;
+	bottom: 0px;
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	border: 1px solid #9A9B9C;
+	right: 0;
+	width: 100%;
 }
 
 .label li {
 	color: #ffffff;
 	text-transform: uppercase;
-	/*letter-spacing: 0.01em;*/
-	/*font-size: 11px;*/
 	width: 14px;
 	text-align: center;
-    font-weight:bold;
+	font-weight: bold;
 	/*safeguard against a label that is too long*/
 	overflow: hidden;
 	float: right;
-	margin-bottom:0px;
-		
+	margin-bottom: 0px;
 }
-.bargraph ul.bars {
 
-	 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 93px;
+.bargraph ul.bars {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 93px;
 }
 
 .bargraph ul.bars li {
 	position: absolute;
-	/*background: url(images/bars200.jpg) no-repeat;*/
-
 	/*move it up from bottom label*/
 	bottom: 29px;
 	width: 10px;
 	height: 200px;
-	padding: 0; margin: 0;
-
+	padding: 0;
+	margin: 0;
 	text-align: center;
 	font-weight: 800;
 	color: white;
-	/*line-height: 2.5em;*/
-	font-size: 13px; /*my tinkering*/
-	/*z-index: 99;*/
+	font-size: 13px; 
 }
-			
-.bargraph ul.bars li.bar1 { left: 5px; }
-.bargraph ul.bars li.bar2 { left: 22px; }
-.bargraph ul.bars li.bar3 { left: 39px; }
-.bargraph ul.bars li.bar4 { left: 56px; }
-.bargraph ul.bars li.bar5 { left: 73px; }
-				
-/*.bargraph ul.bars li.redbar{background: url(images/red_color.png) repeat-y; }
-.bargraph ul.bars li.yellowbar{background: url(images/yellow_color.png) repeat-y; }
-.bargraph ul.bars li.darkredbar{background: url(images/dark_red.png) repeat-y; }
-.bargraph ul.bars li.darkgreenbar{background: url(images/dark_green.png) repeat-y; }*/
 
+.bargraph ul.bars li.bar1 {
+	left: 5px;
+}
+
+.bargraph ul.bars li.bar2 {
+	left: 22px;
+}
+
+.bargraph ul.bars li.bar3 {
+	left: 39px;
+}
+
+.bargraph ul.bars li.bar4 {
+	left: 56px;
+}
+
+.bargraph ul.bars li.bar5 {
+	left: 73px;
+}
 
 /* for vertical week bar */
-.verticalBar{
-	position:relative;
-	width:100%;
-	/*background:red;*/
-	height:100%;
-	margin:0 0 0 13px;
-}
-.bord:hover{
-background:none repeat scroll 0 0 #9AA8D7;
+.verticalBar {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 }
 
-
-.barDim{
-/*	position:absolute;*/
-	bottom:5px;
-	background:blue;
-	height:5px;
-	width:15px;
-	/*-moz-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-khtml-border-radius:3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;*/
-	/* comments for removing border radius */
+.bord:hover {
+	background: none repeat scroll 0 0 #9AA8D7;
 }
+
+.barDim {
+	bottom: 5px;
+	background: blue;
+	height: 5px;
+	width: 15px;
+}
+
 .bargraph ul.bars li.bluebar {
-    background-color:#00feff;
+	background-color: #00feff;
 }
+
 .bargraph ul.bars li.greenbar {
-    background-color:#00ff37;
+	background-color: #00ff37;
 }
+
 .bargraph ul.bars li.yellowbar {
-    background-color:#ffdc00;
+	background-color: #ffdc00;
 }
 
 .bargraph ul.bars li.orangebar {
-    background-color:#FF6600;
+	background-color: #FF6600;
 }
 
 .bargraph ul.bars li.redbar {
-    background-color:#FF0000;
+	background-color: #FF0000;
 }
 
-
-			
-			

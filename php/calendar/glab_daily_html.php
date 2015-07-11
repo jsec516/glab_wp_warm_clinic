@@ -161,8 +161,9 @@ class glab_daily_html
 				$top = $toparr [$min_pos];
 				$treat_dura = $fetch_select ['service_duration'];
 				$barHeight = $treat_dura * 0.55;
+				//$barHeight = '33';
 				$treatcolor = $fetch_select ['color_value'];
-				$bar .= '<span rel="' . plugins_url ( 'glab_clinic' ) . '/glab_ajax_clinic.php?app_id=' . $fetch_select ['appt_id'] . '&tooltipInfo=true" onClick="javascript:showAppDetails(' . $fetch_select ['appt_id'] . ')" class="barDim black_tips" style="display:block; height:' . $barHeight . 'px; top:' . $top . 'px;  background:' . $treatcolor . '; width:90%; z-index:3; position:absolute; border: 1px solid">' . $fetch_select ['cod_flag'] . '' . ":" . '' . $fetch_select ['firstname'] . ' ' . $fetch_select ['lastname'] . '</span>';
+				$bar .= '<span rel="' . plugins_url ( 'glab_clinic' ) . '/glab_ajax_clinic.php?app_id=' . $fetch_select ['appt_id'] . '&tooltipInfo=true" onClick="javascript:showAppDetails(' . $fetch_select ['appt_id'] . ')" class="barDim black_tips" style="display:block; height:' . ($barHeight - 4) . 'px; top:' . $top . 'px;  background:' . $treatcolor . '; width:94%; z-index:3; position:absolute; border: 1px solid">' . $fetch_select ['cod_flag'] . '' . ":" . '' . $fetch_select ['firstname'] . ' ' . $fetch_select ['lastname'] . '</span>';
 			}
 		} else {
 			$bar .= '<span rel="" class="black_tipss"  style="display: block; height: 25px; bottom: 10px; top: 17.5px; width: 90%; left: 5%;">&nbsp;</span>';
@@ -246,6 +247,10 @@ class glab_daily_html
 				background-color:#C0C0C0;
 				color:#ffffff;
 			}
+
+			#hours_div > div:nth-child(2) > div:nth-child(2) {
+			  display: none;
+			}
 				
 			.b_common{
 				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -297,7 +302,8 @@ class glab_daily_html
 			
 			.time2 {
 				display: inline-block;
-	    		margin:-11px 0 0 -2px;
+	    		/*margin:-11px 0 0 -2px;*/
+				margin-top: 7px;
 			}
 		
 			@-moz-document url-prefix() {

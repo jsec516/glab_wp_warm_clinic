@@ -10,7 +10,7 @@ class glab_monthly_html
 			echo '<link type="text/css" rel="stylesheet" href="' . plugins_url ( 'glab_clinic/assets/css/calender.css' ) . '" />';
 			echo '<link type="text/css" rel="stylesheet" href="' . plugins_url ( 'glab_clinic/assets/css/barChart.css' ) . '" />';
 			self::generate_heading ( $data );
-			?>			<div id="calendar_view_main" style="visibility: visible; width: 95%; margin: 0pt 0pt 0pt 14px;">        	<?php 
+			?>			<div id="calendar_view_main" style="visibility: visible; width: 95%; margin: 0pt 0pt 0pt 14px; z-index:9999;">        	<?php 
 		}
         echo self::draw_calendar($data); ?>
         <?php if(!isset($_POST['from_calendar_ajax'])){ ?>	        </div>			<div id="calendar_view_main1" style="display: none; width: 95%; margin: 0pt 0pt 0pt 14px;">				<div class="app_error" id="app_error13"></div>				<div id="divAppointment1" style="display: none; overflow: hidden;"></div>			</div>			<?php 
