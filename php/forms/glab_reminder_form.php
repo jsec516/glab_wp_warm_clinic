@@ -144,8 +144,8 @@ class glab_reminder_form {
             </tr>
             <tr valign="top">
                 <th scope="row">Attach File</th>
-                <td>
-                    <input type="file" name="attach_url" /> <a href="#">Cancel</a>
+                <td>                	<?php $file_exist = false;					if($info['attach_file'] && glab_html_helper::url_exists($info['attach_file'])) {						$file_exist = true; 					?>					<a  href="<?php echo $info['attach_file'];?>"><?php echo glab_html_helper::get_base_file_name($info['attach_file']);?></a>&nbsp;|&nbsp; <a class="delete_file" data-url="<?php echo $info['attach_file']; ?>" href="#">Remove</a>					<?php } ?>
+                    <div style="<?=($file_exist)?'display:none;':''; ?>" >                    	<input type="file" name="attach_url" /> <a href="#">Cancel</a>					</div>
                 </td>
             </tr>
             <tr valign="top">

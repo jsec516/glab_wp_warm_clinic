@@ -9,7 +9,8 @@
             call_reminder_submit: ".call-submit-btn",
             test_call_btn: "#make_call",
             prac_selector: "#practitioner",
-            cancel_upload_selector: "#cancel_upload"
+            cancel_upload_selector: "#cancel_upload",
+            delete_file_selector: ".delete_file"
         };
 
         var settings = $.extend({}, defaults, options);
@@ -280,11 +281,19 @@
         	 e.preventDefault();
         };
 
+        var deleteFile = function(e){
+        	var $that = $(this);
+        	var url = $that.attr('data-url');
+        	//console.log(url);
+        	e.preventDefault();
+        };
+        
         $(document).on("change", settings.reminder_selection, loadReminderType);
         $(document).on("click", settings.elem_selector, addElementTag);
         $(document).on("click", settings.file_selector, uploadCallFile);
         $(document).on("click", settings.remove_selector, removeItem);
         $(document).on("click", settings.cancel_upload_selector, cancelUpload);
+        $(document).on("click", settings.delete_file_selector, deleteFile);
         $(document).on("click", settings.call_reminder_submit, validateSubmission);
         $(document).on("click", settings.test_call_btn, makeTestCall);
         $(document).on("change", settings.prac_selector, loadPracServices);

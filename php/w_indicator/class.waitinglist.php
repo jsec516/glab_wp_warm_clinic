@@ -12,7 +12,7 @@ class WAITINGLIST {
     protected $formattedConsiderableDays;
 
     function __construct() {
-        $env='production';
+        $env='development';
         if($env=='development'){
         $db_config_info = array(
             'SERVER' => 'localhost',
