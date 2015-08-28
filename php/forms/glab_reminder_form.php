@@ -190,52 +190,10 @@ class glab_reminder_form {
                     </select>
                 </td>
             </tr>
-            <tr valign="top">
-                <th scope="row">Reminder Option <span class="required">*</span></th>
-                <td>
-                    <div class="reminder-options-container">
-                        <div class="attach_file_container">
-                            <span style="display:block;"><input type="button"  value="      attach file to play     "  id="att_file_play" name="att_file_play" class="button-secondary " /></span><br/>
-                            <span style="display:block;text-align:right;overflow:hidden;"><input type="file" value="choose file" id="att_file" name="att_file" /></span><br/>
-                            <input type="hidden" name="upload_call_attachment" value="true"/>
-                            <span style="display:block;"><input type="button" value="cancel upload" data-event_type="cancel_upload" id="cancel_upload" name="cancel_upload" class="button-secondary elem-event" /></span><br/>
-                        </div>
-                        <div class="attach_line_container">
-                            <span style="display:block;"><input type="button" value="    attach a line of text   " data-event_type="line" id="attach_line" name="attach_line" class="button-secondary elem-event" /></span><br/>
-                            <span style="display:block;text-align:right;height:28px;">&nbsp;</span><br/>
-                            <span style="display:block;">choose voice : <select id="voice_type" name="call[voice_type]"><option value="man">male</option><option value="woman">female</option></select></span><br/>
-                        </div>
-                        <div class="attach_pause1_container">
-                            <span style="display:block;"><button data-event_type="1_sec_pause" id="pause_name" name="pause_name" class="button-secondary elem-event">insert 1 sec pause</button></span><br/>
-                            <span style="display:block;text-align:right;">&nbsp;</span><br/>
-                            <span style="display:block;"><button data-event_type="fullname" id="attach_name" name="attach_name" class="button-secondary elem-event">insert full name<br> of the patient</button></span><br/>
-                        </div>
-                        <div class="attach_pause2_container">
-                            <span style="display:block;"><button data-event_type="half_sec_pause" id="5_pause_name" name="5_pause_name" class="button-secondary elem-event">insert 0.5 sec pause</button></span><br/>
-                            <span style="display:block;text-align:right;">&nbsp;</span><br/>
-                            <span style="display:block;"><button data-event_type="date" id="attach_time" name="attach_time" class="button-secondary elem-event">insert time and date<br> of the appointment</button></span><br/>
-                        </div>
-                        <span>&nbsp;</span>
-                    </div>
-                </td>
-            </tr>
-            <tr valign="top" class="call-content-container">
-                <th scope="row">Call Content</th>
-                <td>
-                    <div  class="call-content">
-                        <table id="call_content">
-
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            <tr valign="top">
-            <tr><td style="padding: 0 10px 0 20px;text-align: right;width: 145px;"><input type="button" value="Make A Test Call" id="make_call" name="make_call" class="button-secondary"></td><td><input type="text" id="number_text" name="number_text" value="" class="call_box"></td></tr>
-            <th scope="row" style="padding-top:10px;">Send Reminder <span class="required">*</span></th>
-            <td style="padding-top:10px;">
-                <select class="glab_wp_text large" name="call[day]"><?php echo glab_html_helper::reminder_day_option(); ?></select> Day Before The Appointment
-            </td>
-        </tr>
+            <tr valign="top">                <th scope="row">Reminder Option <span class="required">*</span></th>                <td>                    <div class="reminder-options-container">                    	<div class="attach_nd_container">                        	<div><button data-event_type="fullname" id="attach_name" name="attach_name" class="button-secondary elem-event" title="insert full name of the patient">full name</button></div>                                <div><button data-event_type="date" id="attach_time" name="attach_time" class="button-secondary elem-event" title="insert time and date of the appointment">time and date</button></div>                        </div>                        <div class="attach_lf_container">                            <div><input type="button"  value="      attach file to play     "  id="att_file_play" name="att_file_play" class="button-secondary " /></div>                            <div><input type="button" value="    attach a line of text   " data-event_type="line" id="attach_line" name="attach_line" class="button-secondary elem-event" /></div>                        </div>                        <div class="attach_pause_container">                            <div><button data-event_type="1_sec_pause" id="pause_name" name="pause_name" class="button-secondary elem-event" title="insert 1 sec pause" >1 sec pause</button></div>                            <div><button data-event_type="half_sec_pause" id="5_pause_name" name="5_pause_name" class="button-secondary elem-event" title="insert 0.5 sec pause"> 0.5 sec pause</button></div>                        </div>                    </div>                </td>            </tr>            <tr valign="top">            	<th scope="row">Voice</th>            	<td><select id="voice_type" name="call[voice_type]"><option value="man">male</option><option value="woman">female</option></select></td>            </tr>            <tr valign="top" class="call-content-container">                <th scope="row">Call Content</th>                <td>                    <div  class="call-content">                        <table id="call_content">                        </table>                    </div>                </td>            </tr>
+           
+            <tr>            	<th scope="row">Test</th>            	<td>            		<div><input type="text" placeholder="enter number" id="number_text" name="number_text" value="" class="call_box"></div>            		<div><input type="button" value="Make A Test Call" id="make_call" name="make_call" class="button-secondary"></div>            	</td>            </tr>	 		<tr valign="top">
+	            <th scope="row">Send Reminder <span class="required">*</span></th>	            <td>	                <select class="glab_wp_text large" name="call[day]"><?php echo glab_html_helper::reminder_day_option(); ?></select> Day Before The Appointment	            </td>	        </tr>
 
         <tr valign="top">
             <th scope="row">
